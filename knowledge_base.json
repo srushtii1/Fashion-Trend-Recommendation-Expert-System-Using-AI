@@ -1,0 +1,26 @@
+[
+    {
+        "occasion": "business formal",
+        "weather": "winter",
+        "recommendation": ["Blazer", "Wool Trousers", "Scarf"],
+        "explanation": "Blazer for professional look, wool trousers for warmth, and scarf as an accessory."
+    },
+    {
+        "occasion": "business formal",
+        "weather": "summer",
+        "recommendation": ["Light Suit", "Cotton Shirt", "No Tie"],
+        "explanation": "Light suit and cotton shirt for comfort in summer."
+    },
+    {
+        "occasion": "casual outing",
+        "weather": "spring",
+        "recommendation": ["Floral Shirt", "Jeans", "Sneakers"],
+        "explanation": "Floral shirt for a vibrant look and jeans for comfort."
+    },
+    {
+        "occasion": "evening party",
+        "weather": "winter",
+        "recommendation": ["Evening Gown", "Coat", "Heels"],
+        "explanation": "Evening gown with a coat to stay warm and stylish."
+    }
+]

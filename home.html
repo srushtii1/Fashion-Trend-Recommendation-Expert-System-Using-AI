@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Advisor - Expert System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffe5ec, #ffc2d1);
+            overflow: hidden;
+            color: #333;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .fashion-item {
+            position: absolute;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .fashion-item img {
+            width: 100px;
+            height: auto;
+            opacity: 0.7;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .fashion-item img:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h1 {
+            margin: 50px 0 20px;
+            font-size: 3rem;
+            color: #fb6f92;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+            color: #555;
+        }
+
+        select {
+            margin: 10px 0 20px;
+            padding: 10px;
+            width: 80%;
+            font-size: 1rem;
+            border: 2px solid #fb6f92;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #fb6f92;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff8fab;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- Floating fashion items -->
+        <div class="fashion-item" style="top: 10%; left: 20%;">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/dress-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--fashion-girl-clothing-ecommerce-and-shopping-pack-accessories-illustrations-2928745.png?f=webp" alt="Dress">
+        </div>
+        <div class="fashion-item" style="top: 30%; left: 70%;">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/heels-3d-icon-download-in-png-blend-fbx-gltf-file-formats--woman-high-wedding-footwear-fashion-pack-clothing-accessories-icons-8852352.png?f=webp" alt="High Heel">
+        </div>
+        <div class="fashion-item" style="top: 85%; left: 45%;">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/heart-glasses-3d-icon-download-in-png-blend-fbx-gltf-file-formats--sunglasses-eyeglasses-valentine-pack-festival-days-icons-8749188.png?f=webp" alt="Sunglasses">
+        </div>
+        <div class="fashion-item" style="top: 70%; left: 15%;">
+            <img src="https://static.vecteezy.com/system/resources/previews/026/847/928/non_2x/shopping-bag-3d-icon-illustration-free-png.png" alt="Handbag">
+        </div>
+        <div class="fashion-item" style="top: 80%; left: 80%;">
+            <img src="https://img.icons8.com/plasticine/100/lipstick.png" alt="Lipstick">
+        </div>
+    </div>
+
+    <h1>Fashion Recommendation System</h1>
+    <form action="/recommend" method="POST">
+        <label for="occasion">Choose an Occasion:</label>
+        <select id="occasion" name="occasion" required>
+            <option value="business formal">Business Formal</option>
+            <option value="evening party">Evening Party</option>
+            <option value="casual outing">Casual Outing</option>
+        </select>
+
+        <label for="weather">Choose the Weather:</label>
+        <select id="weather" name="weather" required>
+            <option value="winter">Winter</option>
+            <option value="summer">Summer</option>
+            <option value="spring">Spring</option>
+        </select>
+
+        <button type="submit">Get My Outfit</button>
+    </form>
+</body>
+</html>
